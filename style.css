@@ -1,38 +1,77 @@
+* {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
 body {
-    display: flex;
-    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: linear-gradient(to bottom right, #008cff, #e100ff);
+    padding: 10px;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .application { 
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 100%;
+    max-width: 540px;
+    border-radius: 10px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 40px;
+    background-color: white;
 }
 
 header { 
     font-size: 40px;
     text-align: center;
+    padding-bottom: 20px
 }
 
 #input { 
     display: flex;
     justify-content: space-between;
+    height: 50px;
+    background-color: rgb(219, 219, 219);
+    border-radius: 30px;
+    padding-left: 20px;
 }
 
 input {
     flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    border: none;
+    background-color: rgb(0, 145, 255);
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to bottom right, #008cff, #e100ff);
 }
 
 ul {
     list-style-type: none;
     font-size: 20px;
-    
 }
 
 li { 
     list-style: none;
     padding: 12px 8px 12px 50px;
     position: relative;
+    font-size: 18px;
 }
 
 li::before {
@@ -43,7 +82,7 @@ li::before {
     background-image: url(images/unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 12px;
+    top: 10px;
     left: 8px;
 }
 
@@ -71,4 +110,5 @@ li span {
 li span:hover {
     background-color: grey;
     color: white;
+    cursor: pointer;
 }
