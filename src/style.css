@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.application { 
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+header { 
+    font-size: 40px;
+    text-align: center;
+}
+
+#input { 
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    flex: 1;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 20px;
+    
+}
+
+li { 
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+li.checked {
+    color: grey;
+    text-decoration: line-through;
+}
+li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+li span {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    color: grey;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 33%;
+}
+
+li span:hover {
+    background-color: grey;
+    color: white;
+}
